@@ -6,11 +6,11 @@ import Dashboard from "./components/Dashboard";
 import "./styles/App.css";
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false); //tracks login status
+  const [isLogin, setIsLogin] = useState(true); //tracks form type (login/signup)
 
   const handleLogin = () => {
-    setIsAuthenticated(true);
+    setIsAuthenticated(true); //set users as logged in
   };
 
   const handleSignup = () => {
@@ -18,7 +18,7 @@ const App = () => {
   };
 
   const toggleForm = () => {
-    setIsLogin(!isLogin);
+    setIsLogin(!isLogin); //swtich between lgoin and registration forms
   };
 
   return (

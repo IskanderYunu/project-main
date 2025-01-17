@@ -1,26 +1,33 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import home from "../icons/home-icon.svg";
+import "../styles/App.css";
 
 const Login = ({ onLogin }) => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login logic here
-    console.log("Login:", { email, password });
-    onLogin();
+    console.log("Login:", { username, password });
   };
 
   return (
     <div>
+      <div className="top-left-logo">
+        <Link to="/">
+          <img src={home} alt="Logo" className="logo" />
+        </Link>
+      </div>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Email:</label>
+          <label>Username:</label>
           <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             required
           />
         </div>

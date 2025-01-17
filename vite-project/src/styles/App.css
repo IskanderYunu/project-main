@@ -5,13 +5,79 @@ body {
   padding: 0;
 }
 
-.container {
-  width: 300px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.logo {
+  width: 50px; /* Adjust the size as needed */
+  height: auto;
+  cursor: pointer;
+}
+
+.top-left-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.top-right-buttons {
+  position: absolute;
+  top: 40px;
+  right: 45px;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+.small-button {
+  margin-left: 30px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  background-image: url("../icons/search-icon.svg"); /* Add the search icon */
+  background-size: 20px; /* Adjust the size of the icon */
+  background-repeat: no-repeat;
+  background-position: 10px center; /* Position the icon */
+  padding-left: 40px; /* Add padding to the left to make space for the icon */
+}
+
+.search-bar button {
+  padding: 10px;
+  background-color: #3c443d;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  height: 42px; /* Match the height of the input field */
+}
+
+/* my vidoes text */
+.main-box {
+  text-align: center;
+  margin: 20px;
 }
 
 h2 {
@@ -29,18 +95,30 @@ input[type="password"] {
   border-radius: 4px;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.discover {
+  text-align: left;
+  margin: 20px;
 }
 
-button:hover {
-  background-color: #218838;
+.playlist {
+  text-align: left;
+  margin: 20px;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.video-placeholder {
+  flex: 1 1 calc(20% - 10px); /* 5 videos per row with gap */
+  background-color: #ccc;
+  height: 150px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
 }
 
 @keyframes logo-spin {
@@ -56,12 +134,4 @@ button:hover {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

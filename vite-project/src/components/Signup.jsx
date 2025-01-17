@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import home from "../icons/home-icon.svg";
+import "../styles/App.css";
 
 const Signup = ({ onSignup }) => {
   const [username, setUsername] = useState("");
@@ -10,11 +13,15 @@ const Signup = ({ onSignup }) => {
     e.preventDefault();
     // Handle signup logic here
     console.log("Signup:", { username, email, password, grade });
-    onSignup();
   };
 
   return (
     <div>
+      <div className="top-left-logo">
+        <Link to="/">
+          <img src={home} alt="Logo" className="logo" />
+        </Link>
+      </div>
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         <div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import home from "../icons/home-icon.svg";
 import "../styles/App.css";
 

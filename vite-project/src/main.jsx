@@ -1,3 +1,18 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router } from "react-router";
+import App from "./App.jsx";
+import "./styles/App.css";
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <Router>
+      <App />
+    </Router>
+  </StrictMode>
+);
+
+// Old DOM Import
 // import React from "react";
 // import ReactDOM from "react-dom";
 // import { BrowserRouter as Router } from "react-router-dom";
@@ -12,17 +27,3 @@
 //   </React.StrictMode>,
 //   document.getElementById("root")
 // );
-
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router } from "react-router";
-import App from "./App.jsx";
-import "./styles/App.css";
-
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <Router>
-      <App />
-    </Router>
-  </StrictMode>
-);

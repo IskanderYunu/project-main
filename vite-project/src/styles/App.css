@@ -110,7 +110,48 @@ input[type="password"] {
   flex-wrap: wrap;
   gap: 10px;
 }
+/*For User Page */
+.user-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+/*For User Page */
+.video-item {
+  flex: 1 1 calc(33.333% - 20px); /* 3 items per row */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+/*For User Page */
+.user-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+/*For User Page */
+.delete-url-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #407537;
+  color: white;
+  cursor: pointer;
+}
 
+.video-item iframe {
+  display: flex;
+  margin: 9px;
+  border-radius: 15px; /* Slightly rounded corners for the iframe */
+  border-width: 10px;
+  border-style: solid;
+  border-color: #218838;
+}
+
+/*For Main Page */
 .video-placeholder {
   flex: 1 1 calc(20% - 10px); /* 5 videos per row with gap */
   background-color: #ccc;
@@ -118,7 +159,44 @@ input[type="password"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
+}
+
+.centered-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.user-form {
+  display: flex;
+  align-items: center;
+}
+
+.url-input {
+  padding: 20px;
+  font-size: 20px;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  width: 300px; /* Adjust the width as needed */
+}
+
+.add-video-button {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 90px;
+  background-color: #407537;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px; /* Space between input and button */
+}
+
+.add-video-button:hover {
+  background-color: #27b300;
 }
 
 @keyframes logo-spin {
@@ -127,11 +205,5 @@ input[type="password"] {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
   }
 }

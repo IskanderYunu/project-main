@@ -4,6 +4,7 @@ import logger from "morgan";
 import cors from "cors";
 import dotenv from "dotenv";
 
+// import conn.mjs so that I connect to my db
 import db from "./db/conn.mjs";
 dotenv.config();
 

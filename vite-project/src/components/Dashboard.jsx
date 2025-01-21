@@ -25,12 +25,15 @@ const Dashboard = () => {
           <button className="small-button">Login</button>
         </Link>
         <Link to="/signup">
-          <button className="small-button">Signup</button>
+          <button className="small-button">Sign up</button>
+        </Link>
+        <Link to="/user">
+          <button className="small-button">User Page</button>
         </Link>
       </div>
-      <h2>Dashboard</h2>
+      <h2>Welcome Page</h2>
       <div className="main-box">
-        <h3>My Videos</h3>
+        <h3>Explore</h3>
         {/* Add your video list or other content here */}
       </div>
       <div className="search-bar">
